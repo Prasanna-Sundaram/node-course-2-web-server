@@ -55,6 +55,15 @@ res.render('about.hbs',{
 });
 });
 
+app.get('/project',(req,res) => {
+//res.send('About Page');
+res.render('projects.hbs',{
+  pageTitle: 'Project Page',
+  projectMessage: 'Welcome to Project',
+  currentYear: new Date().getFullYear()
+});
+});
+
 app.get('/bad',(req,res) => {
   res.send({
     errorMessage: 'unable to open page'
